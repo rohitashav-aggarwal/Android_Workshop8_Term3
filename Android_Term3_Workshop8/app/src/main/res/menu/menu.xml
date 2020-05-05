@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/profile"
+        android:title="@string/Profile"
+        android:icon="@drawable/ic_action_profile"/>
+    <item
+        android:id="@+id/packages"
+        android:title="@string/Packages"
+        android:icon="@drawable/ic_action_packages"/>
+    <item
+        android:id="@+id/bookings"
+        android:title="@string/Bookings"
+        android:icon="@drawable/ic_action_bookings"/>
+    <item
+        android:id="@+id/logoff"
+        android:title="@string/logoff"
+        android:icon="@drawable/ic_action_logoff"/>
+</menu>

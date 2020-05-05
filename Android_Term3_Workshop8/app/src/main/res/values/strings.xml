@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Travel Experts</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="travel_experts">Travel Experts</string>
+    <string name="login">Login</string>
+    <string name="Profile">Profile</string>
+    <string name="Bookings">Bookings</string>
+    <string name="Packages">Packages</string>
+    <string name="logoff">logoff</string>
+</resources>
