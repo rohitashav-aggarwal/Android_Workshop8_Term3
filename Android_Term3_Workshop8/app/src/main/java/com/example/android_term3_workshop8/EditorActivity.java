@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-
 import com.google.android.material.internal.NavigationMenu;
 
 public class EditorActivity extends AppCompatActivity {

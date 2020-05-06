@@ -8,4 +8,17 @@
     <string name="Bookings">Bookings</string>
     <string name="Packages">Packages</string>
     <string name="logoff">logoff</string>
+    <string name="FirstName">First Name</string>
+    <string name="NewRegistration">New User Registration</string>
+    <string name="LastName">Last Name</string>
+    <string name="Address">Address</string>
+    <string name="City">City</string>
+    <string name="Province">Province</string>
+    <string name="PostalCode">Postal Code</string>
+    <string name="Country">Country</string>
+    <string name="HomePhone">Home Phone</string>
+    <string name="BusPhone">Business Phone</string>
+    <string name="Email">Email Id</string>
+    <string name="Register">Register!</string>
+    <string name="AlreadyRegister">Already a User? Click to Login</string>
 </resources>
