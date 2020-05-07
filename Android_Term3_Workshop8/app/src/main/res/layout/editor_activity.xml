@@ -6,9 +6,17 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".EditorActivity">
+    <RelativeLayout
+        android:id="@+id/editorActivity"
+        android:layout_marginBottom="70dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </RelativeLayout>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:background="@drawable/rounded"
+        android:id="@+id/bottom_nav"
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:layout_alignParentStart="true"

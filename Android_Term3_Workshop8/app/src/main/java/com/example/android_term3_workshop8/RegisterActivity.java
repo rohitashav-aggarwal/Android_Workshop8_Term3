@@ -1,5 +1,6 @@
 package com.example.android_term3_workshop8;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -47,7 +48,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         findViewById(R.id.textViewLogin).setOnClickListener(this);
     }
 
-    private void newUser(){
+    private void newUser() {
         String uFirstName = firstName.getText().toString().trim();
         String uLastName = lastName.getText().toString().trim();
         String uAddress = address.getText().toString().trim();
@@ -61,70 +62,70 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         String uUsername = username.getText().toString().trim();
         String uPassword = password.getText().toString().trim();
 
-        if(uFirstName.isEmpty()){
+        if (uFirstName.isEmpty()) {
             firstName.setError("First name is required");
             firstName.requestFocus();
             return;
         }
-        if(uLastName.isEmpty()){
+        if (uLastName.isEmpty()) {
             lastName.setError("Last name is required");
             lastName.requestFocus();
             return;
         }
-        if(uAddress.isEmpty()){
+        if (uAddress.isEmpty()) {
             address.setError("Address is required");
             address.requestFocus();
             return;
         }
-        if(uCity.isEmpty()){
+        if (uCity.isEmpty()) {
             city.setError("City is required");
             city.requestFocus();
             return;
         }
-        if(uProvince.length() != 2){
+        if (uProvince.length() != 2) {
             province.setError("Province code is required");
             province.requestFocus();
             return;
         }
-        if(uPostal.length() != 6){
+        if (uPostal.length() != 6) {
             postal.setError("Valid 6 char Postal is required");
             postal.requestFocus();
             return;
         }
-        if(uCountry.isEmpty()){
+        if (uCountry.isEmpty()) {
             country.setError("Country is required");
             country.requestFocus();
             return;
         }
-        if(uHomePhone.isEmpty()){
+        if (uHomePhone.isEmpty()) {
             homePhone.setError("Enter a valid phone number");
             homePhone.requestFocus();
             return;
         }
-        if(uBusPhone.isEmpty()){
+        if (uBusPhone.isEmpty()) {
             busPhone.setError("Enter a valid phone number");
             busPhone.requestFocus();
             return;
         }
-        if(uEmail.isEmpty()){
+        if (uEmail.isEmpty()) {
             email.setError("Enter a valid email");
             email.requestFocus();
             return;
         }
-        if(uUsername.isEmpty()){
+        if (uUsername.isEmpty()) {
             username.setError("Username is required");
             username.requestFocus();
             return;
         }
-        if(uPassword.isEmpty()){
+        if (uPassword.isEmpty()) {
             password.setError("Password is required");
             password.requestFocus();
             return;
         }
 
         Call<ResponseBody> call = RetrofitClient.getInstance().getAPI()
-                .registerUser(uFirstName, uLastName,uAddress, uCity, uProvince, uPostal, uCountry
-                , uHomePhone, uBusPhone, uEmail, uUsername, uPassword);
+                .registerUser(uFirstName, uLastName, uAddress, uCity, uProvince, uPostal, uCountry
+                        , uHomePhone, uBusPhone, uEmail, uUsername, uPassword);
         call.enqueue(new Callback<ResponseBody>() {
             @Override
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
@@ -144,14 +145,16 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         });
     }
 
+
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
+        switch (v.getId()) {
             case R.id.Register_Button:
-            newUser();
-            break;
+                newUser();
+                break;
             case R.id.textViewLogin:
-            break;
+                startActivity(new Intent(this, MainActivity.class));
+                break;
         }
     }
 }

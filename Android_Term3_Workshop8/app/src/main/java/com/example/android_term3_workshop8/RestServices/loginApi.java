@@ -2,10 +2,8 @@ package com.example.android_term3_workshop8.RestServices;
 
 import okhttp3.ResponseBody;
 import retrofit2.Call;
-import retrofit2.Response;
-import retrofit2.http.FormUrlEncoded;
+import retrofit2.http.GET;
 import retrofit2.http.Header;
-import retrofit2.http.Headers;
 import retrofit2.http.POST;
 
 public interface loginApi {
@@ -25,4 +23,13 @@ public interface loginApi {
                                            @Header("email") String email,
                                            @Header("username") String username,
                                            @Header("password") String password);
+    @GET("api/getCustomer")
+    Call<ResponseBody> profileUser(@Header("username") String username);
+
+    @POST("api/updateCustomer")
+    Call<ResponseBody> updateCustomer(@Header("id") int id,
+                                      @Header("firstName") String firstname,
+                                      @Header("email") String email,
+                                      @Header("username") String username,
+                                      @Header("password") String password);
 }

@@ -1,6 +1,7 @@
 package com.example.android_term3_workshop8;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Base64;
@@ -12,6 +13,8 @@ import android.widget.Toast;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.android_term3_workshop8.RestServices.loginApi;
+import com.example.android_term3_workshop8.storage.shareUser;
+
 import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -33,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        String url = "http://192.168.1.80:9493/Servlets_Term3_RESTfulAPI_Workshop7_war_exploded/";
+        String url = "http://192.168.1.67:9493/Servlets_Term3_RESTfulAPI_Workshop7_war_exploded/";
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(url)
                 .addConverterFactory(ScalarsConverterFactory.create())
@@ -71,6 +74,7 @@ public class MainActivity extends AppCompatActivity {
                 if(response.isSuccessful()){
                     Toast.makeText(getApplicationContext(), "Welcome " + username, Toast.LENGTH_SHORT).show();
                     LoggedUserToEditorActivity(username);
+                    shareUser.getInstance(MainActivity.this).saveUser(username);
                 }else if(!response.isSuccessful()){
                     Log.e("onResponse: error", String.valueOf(response.code()));
                     Toast.makeText(getApplicationContext(), "Invalid Username or Password", Toast.LENGTH_SHORT).show();
