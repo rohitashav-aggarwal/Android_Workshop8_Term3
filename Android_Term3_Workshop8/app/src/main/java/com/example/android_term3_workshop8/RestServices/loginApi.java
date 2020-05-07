@@ -1,5 +1,7 @@
 package com.example.android_term3_workshop8.RestServices;
 
+import com.example.android_term3_workshop8.models.Customers;
+
 import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.http.GET;
@@ -24,7 +26,7 @@ public interface loginApi {
                                            @Header("username") String username,
                                            @Header("password") String password);
     @GET("api/getCustomer")
-    Call<ResponseBody> profileUser(@Header("username") String username);
+    Call<Customers> profileUser(@Header("username") String username);
 
     @POST("api/updateCustomer")
     Call<ResponseBody> updateCustomer(@Header("id") int id,
