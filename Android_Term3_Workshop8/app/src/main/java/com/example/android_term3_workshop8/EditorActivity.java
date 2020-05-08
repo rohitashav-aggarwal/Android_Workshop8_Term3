@@ -1,3 +1,8 @@
+/*
+Author - Rohit
+Android - Term 3 Project
+ */
+
 package com.example.android_term3_workshop8;
 
 import android.content.Intent;
@@ -11,12 +16,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import com.example.android_term3_workshop8.Fragments.BookingsFragment;
-import com.example.android_term3_workshop8.Fragments.LogOffFragment;
 import com.example.android_term3_workshop8.Fragments.PackagesFragment;
 import com.example.android_term3_workshop8.Fragments.ProfileFragment;
-import com.example.android_term3_workshop8.storage.shareUser;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.android.material.internal.NavigationMenu;
 
 public class EditorActivity extends AppCompatActivity implements  BottomNavigationView.OnNavigationItemSelectedListener{
 

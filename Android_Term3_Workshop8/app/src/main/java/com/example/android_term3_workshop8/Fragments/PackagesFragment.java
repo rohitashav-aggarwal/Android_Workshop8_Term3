@@ -1,12 +1,14 @@
+/*
+Author - Rohit
+Android - Term 3 Project
+ */
+
 package com.example.android_term3_workshop8.Fragments;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
-import android.widget.ListAdapter;
-import android.widget.ListView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -19,12 +21,8 @@ import com.example.android_term3_workshop8.Adapters.PackagesAdapter;
 import com.example.android_term3_workshop8.R;
 import com.example.android_term3_workshop8.RestServices.RetrofitClient;
 import com.example.android_term3_workshop8.models.Packages;
-import com.example.android_term3_workshop8.storage.shareUser;
 
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
-import java.util.stream.Stream;
 
 import retrofit2.Call;
 import retrofit2.Callback;
