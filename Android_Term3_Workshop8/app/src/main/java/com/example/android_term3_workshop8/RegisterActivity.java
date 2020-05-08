@@ -132,6 +132,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                 try {
                     String s = response.body().string();
                     Toast.makeText(RegisterActivity.this, "Registration Complete", Toast.LENGTH_LONG).show();
+                    startActivity(new Intent(getApplicationContext(), MainActivity.class));
                 } catch (IOException e) {
                     e.printStackTrace();
                 }

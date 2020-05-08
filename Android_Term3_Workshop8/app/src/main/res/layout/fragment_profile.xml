@@ -18,11 +18,13 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
                 android:text="ID :"
+                android:background="@color/colorPrimaryLight"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
 
             <EditText
                 android:id="@+id/textViewId"
                 android:inputType="none"
+                android:width="280dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
@@ -35,6 +37,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
                 android:text="First Name :"
+                android:background="@color/colorPrimaryLight"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
 
             <EditText
@@ -51,6 +54,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
+                android:background="@color/colorPrimaryLight"
                 android:text="Email :"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
 
@@ -69,6 +73,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
+                android:background="@color/colorPrimaryLight"
                 android:text="Username :"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
 
@@ -86,6 +91,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
+                android:background="@color/colorPrimaryLight"
                 android:text="Password :"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
 
@@ -106,7 +112,7 @@
         android:layout_height="50dp"
         android:layout_below="@+id/tableLayout"
         android:layout_marginStart="105dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="250dp"
         android:layout_marginEnd="106dp"
         app:cardBackgroundColor="@android:color/holo_blue_dark"
         app:cardCornerRadius="25dp">
@@ -129,7 +135,7 @@
                 android:layout_marginBottom="6dp"
                 android:background="@android:color/transparent"
                 android:text="@string/Update"
-                android:textColor="@color/White"/>
+                android:textColor="@color/White" />
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
 

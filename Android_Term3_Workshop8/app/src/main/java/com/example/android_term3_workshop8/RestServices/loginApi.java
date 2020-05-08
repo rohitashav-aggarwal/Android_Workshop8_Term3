@@ -1,7 +1,9 @@
 package com.example.android_term3_workshop8.RestServices;
 
 import com.example.android_term3_workshop8.models.Customers;
+import com.example.android_term3_workshop8.models.Packages;
 
+import java.util.List;
 import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.http.GET;
@@ -34,4 +36,6 @@ public interface loginApi {
                                       @Header("email") String email,
                                       @Header("username") String username,
                                       @Header("password") String password);
+    @GET("api/getPackages")
+    Call<List<Packages>> getPackage();
 }

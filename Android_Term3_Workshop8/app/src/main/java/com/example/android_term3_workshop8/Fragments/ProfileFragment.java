@@ -17,7 +17,6 @@ import com.example.android_term3_workshop8.R;
 import com.example.android_term3_workshop8.RestServices.RetrofitClient;
 import com.example.android_term3_workshop8.models.Customers;
 import com.example.android_term3_workshop8.storage.shareUser;
-import com.google.gson.Gson;
 
 import okhttp3.ResponseBody;
 import retrofit2.Call;
